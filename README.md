@@ -3,7 +3,7 @@ Wechat mini program promisify wx object
 
 ## 安装
 ```
-$ npm install wx-promisify --save
+$ npm install @ahonn/wx-promisify --save
 ```
 
 ## 使用
