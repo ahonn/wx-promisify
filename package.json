@@ -2,7 +2,7 @@
   "name": "wx-promisify",
   "version": "1.0.0",
   "description": "Wechat mini program promisify wx object",
-  "main": "index.js",
+  "main": "wx.js",
   "keywords": [
     "weapp",
     "wx",
