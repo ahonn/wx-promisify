@@ -1,12 +1,13 @@
 {
   "name": "wx-promisify",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wechat mini program promisify wx object",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "weapp",
+    "wx",
+    "mini program"
+  ],
+  "author": "ahonn <ahonn95@outlook.com>",
+  "license": "MIT"
 }
