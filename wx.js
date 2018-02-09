@@ -26,23 +26,23 @@ function shouldPromisify(methodName) {
 }
 
 function promisifyWx(wx) {
-  var wxp = {}
+  var wxPromise = {}
   var wxPropertyNames = Object.getOwnPropertyNames(wx)
 
   wxPropertyNames.forEach(prop => {
     if (typeof wx[prop] === 'function') {
       if (shouldPromisify(prop)) {
-        wxp[prop] = function (options) {
+        wxPromise[prop] = function (options) {
           options = options || {}
           return new Promise((resolve, reject) => {
             options.success = res => resolve(res)
             options.fail = err => reject(err)
 
-            wx[prop](options)
+            wxPromise[prop](options)
           })
         }
       } else {
-        wxp[prop] = wx[prop]
+        wxPromise[prop] = wx[prop]
       }
     }
   })
@@ -50,7 +50,7 @@ function promisifyWx(wx) {
   return wxp
 }
 
-var wxp = promisifyWx(wx)
-wxp.defualt = wxp
+var wxPromise = promisifyWx(wx)
+wxPromise.defualt = wxPromise
 
-module.exports = wxp
+module.exports = wxPromise

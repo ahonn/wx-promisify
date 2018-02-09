@@ -1,6 +1,6 @@
 {
   "name": "@ahonn/wx-promisify",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Wechat mini program promisify wx object",
   "main": "wx.js",
   "keywords": [
